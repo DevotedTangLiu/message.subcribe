@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service namespace="com.isuwang.soa.message.service" name="CustomerService">
+    <meta>
+        <version>1.0.0</version>
+        <timeout>30000</timeout>
+    </meta>
+    <methods>
+        <method name="onCustomerUpdated">
+            <request name="onCustomerUpdated_args">
+                <fields>
+                    <field tag="1" name="message" optional="false" privacy="false">
+                        <dataType>
+                            <kind>BINARY</kind>
+                        </dataType>
+                        <doc></doc>
+                    </field>
+                </fields>
+            </request>
+            <response name="onCustomerUpdated_result">
+                <fields>
+                    <field tag="0" name="success" optional="false" privacy="false">
+                        <dataType>
+                            <kind>VOID</kind>
+                        </dataType>
+                        <doc></doc>
+                    </field>
+                </fields>
+            </response>
+            <isSoaTransactionProcess>false</isSoaTransactionProcess>
+        </method>
+        <method name="coCustomerUpdated2">
+            <request name="coCustomerUpdated2_args">
+                <fields>
+                    <field tag="1" name="message" optional="false" privacy="false">
+                        <dataType>
+                            <kind>BINARY</kind>
+                        </dataType>
+                        <doc></doc>
+                    </field>
+                </fields>
+            </request>
+            <response name="coCustomerUpdated2_result">
+                <fields>
+                    <field tag="0" name="success" optional="false" privacy="false">
+                        <dataType>
+                            <kind>VOID</kind>
+                        </dataType>
+                        <doc></doc>
+                    </field>
+                </fields>
+            </response>
+            <isSoaTransactionProcess>false</isSoaTransactionProcess>
+        </method>
+    </methods>
+    <structs>
+        <struct namespace="com.isuwang.soa.common.util" name="RequestHeader">
+            <doc>
+
+ 请求头
+</doc>
+            <fields>
+                <field tag="1" name="operatorId" optional="false" privacy="false">
+                    <dataType>
+                        <kind>INTEGER</kind>
+                    </dataType>
+                    <doc>
+
+ 操作人ID
+</doc>
+                </field>
+                <field tag="2" name="operatorName" optional="false" privacy="false">
+                    <dataType>
+                        <kind>STRING</kind>
+                    </dataType>
+                    <doc>
+
+  操作人名称
+</doc>
+                </field>
+                <field tag="3" name="customerId" optional="true" privacy="false">
+                    <dataType>
+                        <kind>INTEGER</kind>
+                    </dataType>
+                    <doc>
+
+ 客户编号
+</doc>
+                </field>
+                <field tag="4" name="customerName" optional="true" privacy="false">
+                    <dataType>
+                        <kind>STRING</kind>
+                    </dataType>
+                    <doc>
+
+ 客户名称
+</doc>
+                </field>
+                <field tag="5" name="callerFrom" optional="true" privacy="false">
+                    <dataType>
+                        <kind>ENUM</kind>
+                        <ref>com.isuwang.soa.common.util.CallerFrom</ref>
+                    </dataType>
+                    <doc>
+
+ 调用源
+</doc>
+                </field>
+                <field tag="6" name="callerIP" optional="true" privacy="false">
+                    <dataType>
+                        <kind>STRING</kind>
+                    </dataType>
+                    <doc>
+
+ 调用源IP
+</doc>
+                </field>
+                <field tag="7" name="sessionId" optional="true" privacy="false">
+                    <dataType>
+                        <kind>STRING</kind>
+                    </dataType>
+                    <doc>
+
+ 会话编号
+</doc>
+                </field>
+            </fields>
+        </struct>
+        <struct namespace="com.isuwang.soa.common.util" name="TPageRequest">
+            <doc>
+
+ 分页查询请求包
+</doc>
+            <fields>
+                <field tag="1" name="start" optional="false" privacy="false">
+                    <dataType>
+                        <kind>INTEGER</kind>
+                    </dataType>
+                    <doc>
+
+ 查询的开始序号（序号从零开始）
+</doc>
+                </field>
+                <field tag="2" name="limit" optional="false" privacy="false">
+                    <dataType>
+                        <kind>INTEGER</kind>
+                    </dataType>
+                    <doc>
+
+ 返回记录数
+</doc>
+                </field>
+                <field tag="3" name="sortFields" optional="true" privacy="false">
+                    <dataType>
+                        <kind>STRING</kind>
+                    </dataType>
+                    <doc>
+
+ 排序的字段
+</doc>
+                </field>
+            </fields>
+        </struct>
+        <struct namespace="com.isuwang.soa.common.util" name="TPageRespone">
+            <fields>
+                <field tag="1" name="start" optional="false" privacy="false">
+                    <dataType>
+                        <kind>INTEGER</kind>
+                    </dataType>
+                    <doc>
+
+ 查询的开始序号（序号从零开始）
+</doc>
+                </field>
+                <field tag="2" name="limit" optional="false" privacy="false">
+                    <dataType>
+                        <kind>INTEGER</kind>
+                    </dataType>
+                    <doc>
+
+ 最大返回的记录数
+</doc>
+                </field>
+                <field tag="3" name="results" optional="false" privacy="false">
+                    <dataType>
+                        <kind>INTEGER</kind>
+                    </dataType>
+                    <doc>
+
+ 结果记录数
+</doc>
+                </field>
+            </fields>
+        </struct>
+        <struct namespace="com.isuwang.soa.common.util" name="TreeNode">
+            <fields>
+                <field tag="1" name="id" optional="false" privacy="false">
+                    <dataType>
+                        <kind>INTEGER</kind>
+                    </dataType>
+                </field>
+                <field tag="2" name="parentId" optional="false" privacy="false">
+                    <dataType>
+                        <kind>INTEGER</kind>
+                    </dataType>
+                </field>
+                <field tag="3" name="text" optional="false" privacy="false">
+                    <dataType>
+                        <kind>STRING</kind>
+                    </dataType>
+                    <doc>显示名称</doc>
+                </field>
+                <field tag="4" name="leaf" optional="false" privacy="false">
+                    <dataType>
+                        <kind>BOOLEAN</kind>
+                    </dataType>
+                    <doc>是否是叶节点(无子节点)</doc>
+                </field>
+                <field tag="5" name="sort" optional="false" privacy="false">
+                    <dataType>
+                        <kind>INTEGER</kind>
+                    </dataType>
+                    <doc>排序</doc>
+                </field>
+                <field tag="6" name="icon" optional="false" privacy="false">
+                    <dataType>
+                        <kind>STRING</kind>
+                    </dataType>
+                    <doc>图标</doc>
+                </field>
+                <field tag="8" name="fullName" optional="false" privacy="false">
+                    <dataType>
+                        <kind>STRING</kind>
+                    </dataType>
+                    <doc>长路径名称</doc>
+                </field>
+            </fields>
+        </struct>
+    </structs>
+    <enums>
+        <tenum namespace="com.isuwang.soa.common.util" name="CallerFrom">
+            <doc>
+
+ 调用源
+</doc>
+            <items>
+                <item>
+                    <label>web</label>
+                    <value>0</value>
+                    <doc>
+
+ 网站
+</doc>
+                </item>
+                <item>
+                    <label>wap</label>
+                    <value>1</value>
+                    <doc>
+
+ 手机Wap
+</doc>
+                </item>
+                <item>
+                    <label>app</label>
+                    <value>2</value>
+                    <doc>
+
+ 手机App
+</doc>
+                </item>
+                <item>
+                    <label>oss</label>
+                    <value>3</value>
+                    <doc>
+
+ 运营管理系统
+</doc>
+                </item>
+                <item>
+                    <label>ksservice</label>
+                    <value>4</value>
+                    <doc>
+
+ 快塑服务
+</doc>
+                </item>
+            </items>
+        </tenum>
+    </enums>
+</service>
