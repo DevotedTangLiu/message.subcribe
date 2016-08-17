@@ -1,4 +1,3 @@
-
 package com.isuwang.soa.message.service;
 
 import com.isuwang.dapeng.core.Processor;

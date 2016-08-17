@@ -10,4 +10,7 @@
     <bean id="accountService" class="com.isuwang.soa.message.service.CustomerServiceImpl"/>
     <soa:service ref="accountService"/>
 
+    <bean id="timerService" class="com.isuwang.soa.time.service.TimerTaskServiceImpl"/>
+    <soa:service ref="timerService"/>
+
 </beans>

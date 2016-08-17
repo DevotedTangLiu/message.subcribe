@@ -1,89 +1,89 @@
-package com.isuwang.soa.message;
+package com.isuwang.soa.time;
 
 import com.isuwang.dapeng.core.*;
 import com.isuwang.org.apache.thrift.TException;
-import com.isuwang.org.apache.thrift.protocol.TProtocol;
+import com.isuwang.org.apache.thrift.protocol.*;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.Optional;
 
-public class CustomerServiceCodec {
+public class TimeTaskServiceCodec {
     public static class RequestHeaderSerializer implements TBeanSerializer<com.isuwang.soa.common.util.RequestHeader> {
 
         @Override
         public void read(com.isuwang.soa.common.util.RequestHeader bean, TProtocol iprot) throws TException {
 
-            com.isuwang.org.apache.thrift.protocol.TField schemeField;
+            TField schemeField;
             iprot.readStructBegin();
 
             while (true) {
                 schemeField = iprot.readFieldBegin();
-                if (schemeField.type == com.isuwang.org.apache.thrift.protocol.TType.STOP) {
+                if (schemeField.type == TType.STOP) {
                     break;
                 }
 
                 switch (schemeField.id) {
 
                     case 1:
-                        if (schemeField.type == com.isuwang.org.apache.thrift.protocol.TType.I32) {
+                        if (schemeField.type == TType.I32) {
                             bean.setOperatorId(iprot.readI32());
                         } else {
-                            com.isuwang.org.apache.thrift.protocol.TProtocolUtil.skip(iprot, schemeField.type);
+                            TProtocolUtil.skip(iprot, schemeField.type);
                         }
                         break;
 
                     case 2:
-                        if (schemeField.type == com.isuwang.org.apache.thrift.protocol.TType.STRING) {
+                        if (schemeField.type == TType.STRING) {
                             bean.setOperatorName(iprot.readString());
                         } else {
-                            com.isuwang.org.apache.thrift.protocol.TProtocolUtil.skip(iprot, schemeField.type);
+                            TProtocolUtil.skip(iprot, schemeField.type);
                         }
                         break;
 
                     case 3:
-                        if (schemeField.type == com.isuwang.org.apache.thrift.protocol.TType.I32) {
+                        if (schemeField.type == TType.I32) {
                             bean.setCustomerId(Optional.of(iprot.readI32()));
                         } else {
-                            com.isuwang.org.apache.thrift.protocol.TProtocolUtil.skip(iprot, schemeField.type);
+                            TProtocolUtil.skip(iprot, schemeField.type);
                         }
                         break;
 
                     case 4:
-                        if (schemeField.type == com.isuwang.org.apache.thrift.protocol.TType.STRING) {
+                        if (schemeField.type == TType.STRING) {
                             bean.setCustomerName(Optional.of(iprot.readString()));
                         } else {
-                            com.isuwang.org.apache.thrift.protocol.TProtocolUtil.skip(iprot, schemeField.type);
+                            TProtocolUtil.skip(iprot, schemeField.type);
                         }
                         break;
 
                     case 5:
-                        if (schemeField.type == com.isuwang.org.apache.thrift.protocol.TType.I32) {
+                        if (schemeField.type == TType.I32) {
                             bean.setCallerFrom(Optional.of(com.isuwang.soa.common.util.CallerFrom.findByValue(iprot.readI32())));
                         } else {
-                            com.isuwang.org.apache.thrift.protocol.TProtocolUtil.skip(iprot, schemeField.type);
+                            TProtocolUtil.skip(iprot, schemeField.type);
                         }
                         break;
 
                     case 6:
-                        if (schemeField.type == com.isuwang.org.apache.thrift.protocol.TType.STRING) {
+                        if (schemeField.type == TType.STRING) {
                             bean.setCallerIP(Optional.of(iprot.readString()));
                         } else {
-                            com.isuwang.org.apache.thrift.protocol.TProtocolUtil.skip(iprot, schemeField.type);
+                            TProtocolUtil.skip(iprot, schemeField.type);
                         }
                         break;
 
                     case 7:
-                        if (schemeField.type == com.isuwang.org.apache.thrift.protocol.TType.STRING) {
+                        if (schemeField.type == TType.STRING) {
                             bean.setSessionId(Optional.of(iprot.readString()));
                         } else {
-                            com.isuwang.org.apache.thrift.protocol.TProtocolUtil.skip(iprot, schemeField.type);
+                            TProtocolUtil.skip(iprot, schemeField.type);
                         }
                         break;
 
 
                     default:
-                        com.isuwang.org.apache.thrift.protocol.TProtocolUtil.skip(iprot, schemeField.type);
+                        TProtocolUtil.skip(iprot, schemeField.type);
 
                 }
                 iprot.readFieldEnd();
@@ -97,38 +97,38 @@ public class CustomerServiceCodec {
         public void write(com.isuwang.soa.common.util.RequestHeader bean, TProtocol oprot) throws TException {
 
             validate(bean);
-            oprot.writeStructBegin(new com.isuwang.org.apache.thrift.protocol.TStruct("RequestHeader"));
+            oprot.writeStructBegin(new TStruct("RequestHeader"));
 
 
-            oprot.writeFieldBegin(new com.isuwang.org.apache.thrift.protocol.TField("operatorId", com.isuwang.org.apache.thrift.protocol.TType.I32, (short) 1));
+            oprot.writeFieldBegin(new TField("operatorId", TType.I32, (short) 1));
             oprot.writeI32(bean.getOperatorId());
             oprot.writeFieldEnd();
 
-            oprot.writeFieldBegin(new com.isuwang.org.apache.thrift.protocol.TField("operatorName", com.isuwang.org.apache.thrift.protocol.TType.STRING, (short) 2));
+            oprot.writeFieldBegin(new TField("operatorName", TType.STRING, (short) 2));
             oprot.writeString(bean.getOperatorName());
             oprot.writeFieldEnd();
             if (bean.getCustomerId().isPresent()) {
-                oprot.writeFieldBegin(new com.isuwang.org.apache.thrift.protocol.TField("customerId", com.isuwang.org.apache.thrift.protocol.TType.I32, (short) 3));
+                oprot.writeFieldBegin(new TField("customerId", TType.I32, (short) 3));
                 oprot.writeI32(bean.getCustomerId().get());
                 oprot.writeFieldEnd();
             }
             if (bean.getCustomerName().isPresent()) {
-                oprot.writeFieldBegin(new com.isuwang.org.apache.thrift.protocol.TField("customerName", com.isuwang.org.apache.thrift.protocol.TType.STRING, (short) 4));
+                oprot.writeFieldBegin(new TField("customerName", TType.STRING, (short) 4));
                 oprot.writeString(bean.getCustomerName().get());
                 oprot.writeFieldEnd();
             }
             if (bean.getCallerFrom().isPresent()) {
-                oprot.writeFieldBegin(new com.isuwang.org.apache.thrift.protocol.TField("callerFrom", com.isuwang.org.apache.thrift.protocol.TType.I32, (short) 5));
+                oprot.writeFieldBegin(new TField("callerFrom", TType.I32, (short) 5));
                 oprot.writeI32(bean.getCallerFrom().get().getValue());
                 oprot.writeFieldEnd();
             }
             if (bean.getCallerIP().isPresent()) {
-                oprot.writeFieldBegin(new com.isuwang.org.apache.thrift.protocol.TField("callerIP", com.isuwang.org.apache.thrift.protocol.TType.STRING, (short) 6));
+                oprot.writeFieldBegin(new TField("callerIP", TType.STRING, (short) 6));
                 oprot.writeString(bean.getCallerIP().get());
                 oprot.writeFieldEnd();
             }
             if (bean.getSessionId().isPresent()) {
-                oprot.writeFieldBegin(new com.isuwang.org.apache.thrift.protocol.TField("sessionId", com.isuwang.org.apache.thrift.protocol.TType.STRING, (short) 7));
+                oprot.writeFieldBegin(new TField("sessionId", TType.STRING, (short) 7));
                 oprot.writeString(bean.getSessionId().get());
                 oprot.writeFieldEnd();
             }
@@ -158,44 +158,44 @@ public class CustomerServiceCodec {
         @Override
         public void read(com.isuwang.soa.common.util.TPageRequest bean, TProtocol iprot) throws TException {
 
-            com.isuwang.org.apache.thrift.protocol.TField schemeField;
+            TField schemeField;
             iprot.readStructBegin();
 
             while (true) {
                 schemeField = iprot.readFieldBegin();
-                if (schemeField.type == com.isuwang.org.apache.thrift.protocol.TType.STOP) {
+                if (schemeField.type == TType.STOP) {
                     break;
                 }
 
                 switch (schemeField.id) {
 
                     case 1:
-                        if (schemeField.type == com.isuwang.org.apache.thrift.protocol.TType.I32) {
+                        if (schemeField.type == TType.I32) {
                             bean.setStart(iprot.readI32());
                         } else {
-                            com.isuwang.org.apache.thrift.protocol.TProtocolUtil.skip(iprot, schemeField.type);
+                            TProtocolUtil.skip(iprot, schemeField.type);
                         }
                         break;
 
                     case 2:
-                        if (schemeField.type == com.isuwang.org.apache.thrift.protocol.TType.I32) {
+                        if (schemeField.type == TType.I32) {
                             bean.setLimit(iprot.readI32());
                         } else {
-                            com.isuwang.org.apache.thrift.protocol.TProtocolUtil.skip(iprot, schemeField.type);
+                            TProtocolUtil.skip(iprot, schemeField.type);
                         }
                         break;
 
                     case 3:
-                        if (schemeField.type == com.isuwang.org.apache.thrift.protocol.TType.STRING) {
+                        if (schemeField.type == TType.STRING) {
                             bean.setSortFields(Optional.of(iprot.readString()));
                         } else {
-                            com.isuwang.org.apache.thrift.protocol.TProtocolUtil.skip(iprot, schemeField.type);
+                            TProtocolUtil.skip(iprot, schemeField.type);
                         }
                         break;
 
 
                     default:
-                        com.isuwang.org.apache.thrift.protocol.TProtocolUtil.skip(iprot, schemeField.type);
+                        TProtocolUtil.skip(iprot, schemeField.type);
 
                 }
                 iprot.readFieldEnd();
@@ -209,18 +209,18 @@ public class CustomerServiceCodec {
         public void write(com.isuwang.soa.common.util.TPageRequest bean, TProtocol oprot) throws TException {
 
             validate(bean);
-            oprot.writeStructBegin(new com.isuwang.org.apache.thrift.protocol.TStruct("TPageRequest"));
+            oprot.writeStructBegin(new TStruct("TPageRequest"));
 
 
-            oprot.writeFieldBegin(new com.isuwang.org.apache.thrift.protocol.TField("start", com.isuwang.org.apache.thrift.protocol.TType.I32, (short) 1));
+            oprot.writeFieldBegin(new TField("start", TType.I32, (short) 1));
             oprot.writeI32(bean.getStart());
             oprot.writeFieldEnd();
 
-            oprot.writeFieldBegin(new com.isuwang.org.apache.thrift.protocol.TField("limit", com.isuwang.org.apache.thrift.protocol.TType.I32, (short) 2));
+            oprot.writeFieldBegin(new TField("limit", TType.I32, (short) 2));
             oprot.writeI32(bean.getLimit());
             oprot.writeFieldEnd();
             if (bean.getSortFields().isPresent()) {
-                oprot.writeFieldBegin(new com.isuwang.org.apache.thrift.protocol.TField("sortFields", com.isuwang.org.apache.thrift.protocol.TType.STRING, (short) 3));
+                oprot.writeFieldBegin(new TField("sortFields", TType.STRING, (short) 3));
                 oprot.writeString(bean.getSortFields().get());
                 oprot.writeFieldEnd();
             }
@@ -245,24 +245,12 @@ public class CustomerServiceCodec {
         }
     }
 
-    public static class onCustomerUpdated_args {
-
-        private java.nio.ByteBuffer message;
-
-        public java.nio.ByteBuffer getMessage() {
-            return this.message;
-        }
-
-        public void setMessage(java.nio.ByteBuffer message) {
-            this.message = message;
-        }
+    public static class timerTask1_args {
 
 
         @Override
         public String toString() {
             StringBuilder stringBuilder = new StringBuilder("{");
-
-            stringBuilder.append("\"").append("message").append("\":").append(message).append(",");
 
             if (stringBuilder.lastIndexOf(",") > 0)
                 stringBuilder.deleteCharAt(stringBuilder.lastIndexOf(","));
@@ -274,7 +262,7 @@ public class CustomerServiceCodec {
     }
 
 
-    public static class onCustomerUpdated_result {
+    public static class timerTask1_result {
 
 
         @Override
@@ -284,33 +272,25 @@ public class CustomerServiceCodec {
 
     }
 
-    public static class OnCustomerUpdated_argsSerializer implements TBeanSerializer<onCustomerUpdated_args> {
+    public static class TimerTask1_argsSerializer implements TBeanSerializer<timerTask1_args> {
 
         @Override
-        public void read(onCustomerUpdated_args bean, TProtocol iprot) throws TException {
+        public void read(timerTask1_args bean, TProtocol iprot) throws TException {
 
-            com.isuwang.org.apache.thrift.protocol.TField schemeField;
+            TField schemeField;
             iprot.readStructBegin();
 
             while (true) {
                 schemeField = iprot.readFieldBegin();
-                if (schemeField.type == com.isuwang.org.apache.thrift.protocol.TType.STOP) {
+                if (schemeField.type == TType.STOP) {
                     break;
                 }
 
                 switch (schemeField.id) {
 
-                    case 1:
-                        if (schemeField.type == com.isuwang.org.apache.thrift.protocol.TType.STRING) {
-                            bean.setMessage(iprot.readBinary());
-                        } else {
-                            com.isuwang.org.apache.thrift.protocol.TProtocolUtil.skip(iprot, schemeField.type);
-                        }
-                        break;
-
 
                     default:
-                        com.isuwang.org.apache.thrift.protocol.TProtocolUtil.skip(iprot, schemeField.type);
+                        TProtocolUtil.skip(iprot, schemeField.type);
 
                 }
                 iprot.readFieldEnd();
@@ -322,55 +302,48 @@ public class CustomerServiceCodec {
 
 
         @Override
-        public void write(onCustomerUpdated_args bean, TProtocol oprot) throws TException {
+        public void write(timerTask1_args bean, TProtocol oprot) throws TException {
 
             validate(bean);
-            oprot.writeStructBegin(new com.isuwang.org.apache.thrift.protocol.TStruct("onCustomerUpdated_args"));
+            oprot.writeStructBegin(new TStruct("timerTask1_args"));
 
-
-            oprot.writeFieldBegin(new com.isuwang.org.apache.thrift.protocol.TField("message", com.isuwang.org.apache.thrift.protocol.TType.STRING, (short) 1));
-            oprot.writeBinary(bean.getMessage());
-            oprot.writeFieldEnd();
 
             oprot.writeFieldStop();
             oprot.writeStructEnd();
         }
 
 
-        public void validate(onCustomerUpdated_args bean) throws TException {
-
-            if (bean.getMessage() == null)
-                throw new SoaException(SoaBaseCode.NotNull, "message字段不允许为空");
+        public void validate(timerTask1_args bean) throws TException {
 
         }
 
 
         @Override
-        public String toString(onCustomerUpdated_args bean) {
+        public String toString(timerTask1_args bean) {
             return bean == null ? "null" : bean.toString();
         }
 
     }
 
-    public static class OnCustomerUpdated_resultSerializer implements TBeanSerializer<onCustomerUpdated_result> {
+    public static class TimerTask1_resultSerializer implements TBeanSerializer<timerTask1_result> {
         @Override
-        public void read(onCustomerUpdated_result bean, TProtocol iprot) throws TException {
+        public void read(timerTask1_result bean, TProtocol iprot) throws TException {
 
-            com.isuwang.org.apache.thrift.protocol.TField schemeField;
+            TField schemeField;
             iprot.readStructBegin();
 
             while (true) {
                 schemeField = iprot.readFieldBegin();
-                if (schemeField.type == com.isuwang.org.apache.thrift.protocol.TType.STOP) {
+                if (schemeField.type == TType.STOP) {
                     break;
                 }
 
                 switch (schemeField.id) {
                     case 0:  //SUCCESS
-                        if (schemeField.type == com.isuwang.org.apache.thrift.protocol.TType.VOID) {
-                            com.isuwang.org.apache.thrift.protocol.TProtocolUtil.skip(iprot, schemeField.type);
+                        if (schemeField.type == TType.VOID) {
+                            TProtocolUtil.skip(iprot, schemeField.type);
                         } else {
-                            com.isuwang.org.apache.thrift.protocol.TProtocolUtil.skip(iprot, schemeField.type);
+                            TProtocolUtil.skip(iprot, schemeField.type);
                         }
                         break;
                     /*
@@ -380,7 +353,7 @@ public class CustomerServiceCodec {
                         break A;
                     */
                     default:
-                        com.isuwang.org.apache.thrift.protocol.TProtocolUtil.skip(iprot, schemeField.type);
+                        TProtocolUtil.skip(iprot, schemeField.type);
                 }
                 iprot.readFieldEnd();
             }
@@ -390,10 +363,10 @@ public class CustomerServiceCodec {
         }
 
         @Override
-        public void write(onCustomerUpdated_result bean, TProtocol oprot) throws TException {
+        public void write(timerTask1_result bean, TProtocol oprot) throws TException {
 
             validate(bean);
-            oprot.writeStructBegin(new com.isuwang.org.apache.thrift.protocol.TStruct("onCustomerUpdated_result"));
+            oprot.writeStructBegin(new TStruct("timerTask1_result"));
 
 
             oprot.writeFieldStop();
@@ -401,35 +374,35 @@ public class CustomerServiceCodec {
         }
 
 
-        public void validate(onCustomerUpdated_result bean) throws TException {
+        public void validate(timerTask1_result bean) throws TException {
 
         }
 
 
         @Override
-        public String toString(onCustomerUpdated_result bean) {
+        public String toString(timerTask1_result bean) {
             return bean == null ? "null" : bean.toString();
         }
     }
 
-    public static class onCustomerUpdated<I extends com.isuwang.soa.message.service.CustomerService> extends SoaProcessFunction<I, onCustomerUpdated_args, onCustomerUpdated_result, OnCustomerUpdated_argsSerializer, OnCustomerUpdated_resultSerializer> {
-        public onCustomerUpdated() {
-            super("onCustomerUpdated", new OnCustomerUpdated_argsSerializer(), new OnCustomerUpdated_resultSerializer());
+    public static class timerTask1<I extends com.isuwang.soa.time.service.TimeTaskService> extends SoaProcessFunction<I, timerTask1_args, timerTask1_result, TimerTask1_argsSerializer, TimerTask1_resultSerializer> {
+        public timerTask1() {
+            super("timerTask1", new TimerTask1_argsSerializer(), new TimerTask1_resultSerializer());
         }
 
         @Override
-        public onCustomerUpdated_result getResult(I iface, onCustomerUpdated_args args) throws TException {
-            onCustomerUpdated_result result = new onCustomerUpdated_result();
+        public timerTask1_result getResult(I iface, timerTask1_args args) throws TException {
+            timerTask1_result result = new timerTask1_result();
 
-            iface.onCustomerUpdated(args.message);
+            iface.timerTask1();
 
             return result;
         }
 
 
         @Override
-        public onCustomerUpdated_args getEmptyArgsInstance() {
-            return new onCustomerUpdated_args();
+        public timerTask1_args getEmptyArgsInstance() {
+            return new timerTask1_args();
         }
 
         @Override
@@ -438,24 +411,12 @@ public class CustomerServiceCodec {
         }
     }
 
-    public static class coCustomerUpdated2_args {
-
-        private java.nio.ByteBuffer message;
-
-        public java.nio.ByteBuffer getMessage() {
-            return this.message;
-        }
-
-        public void setMessage(java.nio.ByteBuffer message) {
-            this.message = message;
-        }
+    public static class timerTask2_args {
 
 
         @Override
         public String toString() {
             StringBuilder stringBuilder = new StringBuilder("{");
-
-            stringBuilder.append("\"").append("message").append("\":").append(message).append(",");
 
             if (stringBuilder.lastIndexOf(",") > 0)
                 stringBuilder.deleteCharAt(stringBuilder.lastIndexOf(","));
@@ -467,7 +428,7 @@ public class CustomerServiceCodec {
     }
 
 
-    public static class coCustomerUpdated2_result {
+    public static class timerTask2_result {
 
 
         @Override
@@ -477,33 +438,25 @@ public class CustomerServiceCodec {
 
     }
 
-    public static class CoCustomerUpdated2_argsSerializer implements TBeanSerializer<coCustomerUpdated2_args> {
+    public static class TimerTask2_argsSerializer implements TBeanSerializer<timerTask2_args> {
 
         @Override
-        public void read(coCustomerUpdated2_args bean, TProtocol iprot) throws TException {
+        public void read(timerTask2_args bean, TProtocol iprot) throws TException {
 
-            com.isuwang.org.apache.thrift.protocol.TField schemeField;
+            TField schemeField;
             iprot.readStructBegin();
 
             while (true) {
                 schemeField = iprot.readFieldBegin();
-                if (schemeField.type == com.isuwang.org.apache.thrift.protocol.TType.STOP) {
+                if (schemeField.type == TType.STOP) {
                     break;
                 }
 
                 switch (schemeField.id) {
 
-                    case 1:
-                        if (schemeField.type == com.isuwang.org.apache.thrift.protocol.TType.STRING) {
-                            bean.setMessage(iprot.readBinary());
-                        } else {
-                            com.isuwang.org.apache.thrift.protocol.TProtocolUtil.skip(iprot, schemeField.type);
-                        }
-                        break;
-
 
                     default:
-                        com.isuwang.org.apache.thrift.protocol.TProtocolUtil.skip(iprot, schemeField.type);
+                        TProtocolUtil.skip(iprot, schemeField.type);
 
                 }
                 iprot.readFieldEnd();
@@ -515,55 +468,48 @@ public class CustomerServiceCodec {
 
 
         @Override
-        public void write(coCustomerUpdated2_args bean, TProtocol oprot) throws TException {
+        public void write(timerTask2_args bean, TProtocol oprot) throws TException {
 
             validate(bean);
-            oprot.writeStructBegin(new com.isuwang.org.apache.thrift.protocol.TStruct("coCustomerUpdated2_args"));
+            oprot.writeStructBegin(new TStruct("timerTask2_args"));
 
-
-            oprot.writeFieldBegin(new com.isuwang.org.apache.thrift.protocol.TField("message", com.isuwang.org.apache.thrift.protocol.TType.STRING, (short) 1));
-            oprot.writeBinary(bean.getMessage());
-            oprot.writeFieldEnd();
 
             oprot.writeFieldStop();
             oprot.writeStructEnd();
         }
 
 
-        public void validate(coCustomerUpdated2_args bean) throws TException {
-
-            if (bean.getMessage() == null)
-                throw new SoaException(SoaBaseCode.NotNull, "message字段不允许为空");
+        public void validate(timerTask2_args bean) throws TException {
 
         }
 
 
         @Override
-        public String toString(coCustomerUpdated2_args bean) {
+        public String toString(timerTask2_args bean) {
             return bean == null ? "null" : bean.toString();
         }
 
     }
 
-    public static class CoCustomerUpdated2_resultSerializer implements TBeanSerializer<coCustomerUpdated2_result> {
+    public static class TimerTask2_resultSerializer implements TBeanSerializer<timerTask2_result> {
         @Override
-        public void read(coCustomerUpdated2_result bean, TProtocol iprot) throws TException {
+        public void read(timerTask2_result bean, TProtocol iprot) throws TException {
 
-            com.isuwang.org.apache.thrift.protocol.TField schemeField;
+            TField schemeField;
             iprot.readStructBegin();
 
             while (true) {
                 schemeField = iprot.readFieldBegin();
-                if (schemeField.type == com.isuwang.org.apache.thrift.protocol.TType.STOP) {
+                if (schemeField.type == TType.STOP) {
                     break;
                 }
 
                 switch (schemeField.id) {
                     case 0:  //SUCCESS
-                        if (schemeField.type == com.isuwang.org.apache.thrift.protocol.TType.VOID) {
-                            com.isuwang.org.apache.thrift.protocol.TProtocolUtil.skip(iprot, schemeField.type);
+                        if (schemeField.type == TType.VOID) {
+                            TProtocolUtil.skip(iprot, schemeField.type);
                         } else {
-                            com.isuwang.org.apache.thrift.protocol.TProtocolUtil.skip(iprot, schemeField.type);
+                            TProtocolUtil.skip(iprot, schemeField.type);
                         }
                         break;
                     /*
@@ -573,7 +519,7 @@ public class CustomerServiceCodec {
                         break A;
                     */
                     default:
-                        com.isuwang.org.apache.thrift.protocol.TProtocolUtil.skip(iprot, schemeField.type);
+                        TProtocolUtil.skip(iprot, schemeField.type);
                 }
                 iprot.readFieldEnd();
             }
@@ -583,10 +529,10 @@ public class CustomerServiceCodec {
         }
 
         @Override
-        public void write(coCustomerUpdated2_result bean, TProtocol oprot) throws TException {
+        public void write(timerTask2_result bean, TProtocol oprot) throws TException {
 
             validate(bean);
-            oprot.writeStructBegin(new com.isuwang.org.apache.thrift.protocol.TStruct("coCustomerUpdated2_result"));
+            oprot.writeStructBegin(new TStruct("timerTask2_result"));
 
 
             oprot.writeFieldStop();
@@ -594,35 +540,35 @@ public class CustomerServiceCodec {
         }
 
 
-        public void validate(coCustomerUpdated2_result bean) throws TException {
+        public void validate(timerTask2_result bean) throws TException {
 
         }
 
 
         @Override
-        public String toString(coCustomerUpdated2_result bean) {
+        public String toString(timerTask2_result bean) {
             return bean == null ? "null" : bean.toString();
         }
     }
 
-    public static class coCustomerUpdated2<I extends com.isuwang.soa.message.service.CustomerService> extends SoaProcessFunction<I, coCustomerUpdated2_args, coCustomerUpdated2_result, CoCustomerUpdated2_argsSerializer, CoCustomerUpdated2_resultSerializer> {
-        public coCustomerUpdated2() {
-            super("coCustomerUpdated2", new CoCustomerUpdated2_argsSerializer(), new CoCustomerUpdated2_resultSerializer());
+    public static class timerTask2<I extends com.isuwang.soa.time.service.TimeTaskService> extends SoaProcessFunction<I, timerTask2_args, timerTask2_result, TimerTask2_argsSerializer, TimerTask2_resultSerializer> {
+        public timerTask2() {
+            super("timerTask2", new TimerTask2_argsSerializer(), new TimerTask2_resultSerializer());
         }
 
         @Override
-        public coCustomerUpdated2_result getResult(I iface, coCustomerUpdated2_args args) throws TException {
-            coCustomerUpdated2_result result = new coCustomerUpdated2_result();
+        public timerTask2_result getResult(I iface, timerTask2_args args) throws TException {
+            timerTask2_result result = new timerTask2_result();
 
-            iface.coCustomerUpdated2(args.message);
+            iface.timerTask2();
 
             return result;
         }
 
 
         @Override
-        public coCustomerUpdated2_args getEmptyArgsInstance() {
-            return new coCustomerUpdated2_args();
+        public timerTask2_args getEmptyArgsInstance() {
+            return new timerTask2_args();
         }
 
         @Override
@@ -669,17 +615,17 @@ public class CustomerServiceCodec {
         @Override
         public void read(getServiceMetadata_args bean, TProtocol iprot) throws TException {
 
-            com.isuwang.org.apache.thrift.protocol.TField schemeField;
+            TField schemeField;
             iprot.readStructBegin();
 
             while (true) {
                 schemeField = iprot.readFieldBegin();
-                if (schemeField.type == com.isuwang.org.apache.thrift.protocol.TType.STOP) {
+                if (schemeField.type == TType.STOP) {
                     break;
                 }
                 switch (schemeField.id) {
                     default:
-                        com.isuwang.org.apache.thrift.protocol.TProtocolUtil.skip(iprot, schemeField.type);
+                        TProtocolUtil.skip(iprot, schemeField.type);
 
                 }
                 iprot.readFieldEnd();
@@ -694,7 +640,7 @@ public class CustomerServiceCodec {
         public void write(getServiceMetadata_args bean, TProtocol oprot) throws TException {
 
             validate(bean);
-            oprot.writeStructBegin(new com.isuwang.org.apache.thrift.protocol.TStruct("getServiceMetadata_args"));
+            oprot.writeStructBegin(new TStruct("getServiceMetadata_args"));
             oprot.writeFieldStop();
             oprot.writeStructEnd();
         }
@@ -713,25 +659,25 @@ public class CustomerServiceCodec {
         @Override
         public void read(getServiceMetadata_result bean, TProtocol iprot) throws TException {
 
-            com.isuwang.org.apache.thrift.protocol.TField schemeField;
+            TField schemeField;
             iprot.readStructBegin();
 
             while (true) {
                 schemeField = iprot.readFieldBegin();
-                if (schemeField.type == com.isuwang.org.apache.thrift.protocol.TType.STOP) {
+                if (schemeField.type == TType.STOP) {
                     break;
                 }
 
                 switch (schemeField.id) {
                     case 0:  //SUCCESS
-                        if (schemeField.type == com.isuwang.org.apache.thrift.protocol.TType.STRING) {
+                        if (schemeField.type == TType.STRING) {
                             bean.setSuccess(iprot.readString());
                         } else {
-                            com.isuwang.org.apache.thrift.protocol.TProtocolUtil.skip(iprot, schemeField.type);
+                            TProtocolUtil.skip(iprot, schemeField.type);
                         }
                         break;
                     default:
-                        com.isuwang.org.apache.thrift.protocol.TProtocolUtil.skip(iprot, schemeField.type);
+                        TProtocolUtil.skip(iprot, schemeField.type);
                 }
                 iprot.readFieldEnd();
             }
@@ -744,9 +690,9 @@ public class CustomerServiceCodec {
         public void write(getServiceMetadata_result bean, TProtocol oprot) throws TException {
 
             validate(bean);
-            oprot.writeStructBegin(new com.isuwang.org.apache.thrift.protocol.TStruct("getServiceMetadata_result"));
+            oprot.writeStructBegin(new TStruct("getServiceMetadata_result"));
 
-            oprot.writeFieldBegin(new com.isuwang.org.apache.thrift.protocol.TField("success", com.isuwang.org.apache.thrift.protocol.TType.STRING, (short) 0));
+            oprot.writeFieldBegin(new TField("success", TType.STRING, (short) 0));
             oprot.writeString(bean.getSuccess());
             oprot.writeFieldEnd();
 
@@ -766,7 +712,7 @@ public class CustomerServiceCodec {
         }
     }
 
-    public static class getServiceMetadata<I extends com.isuwang.soa.message.service.CustomerService> extends SoaProcessFunction<I, getServiceMetadata_args, getServiceMetadata_result, GetServiceMetadata_argsSerializer, GetServiceMetadata_resultSerializer> {
+    public static class getServiceMetadata<I extends com.isuwang.soa.time.service.TimeTaskService> extends SoaProcessFunction<I, getServiceMetadata_args, getServiceMetadata_result, GetServiceMetadata_argsSerializer, GetServiceMetadata_resultSerializer> {
         public getServiceMetadata() {
             super("getServiceMetadata", new GetServiceMetadata_argsSerializer(), new GetServiceMetadata_resultSerializer());
         }
@@ -775,7 +721,7 @@ public class CustomerServiceCodec {
         public getServiceMetadata_result getResult(I iface, getServiceMetadata_args args) throws TException {
             getServiceMetadata_result result = new getServiceMetadata_result();
 
-            try (InputStreamReader isr = new InputStreamReader(CustomerServiceCodec.class.getClassLoader().getResourceAsStream("com.isuwang.soa.message.service.CustomerService.xml"));
+            try (InputStreamReader isr = new InputStreamReader(TimeTaskServiceCodec.class.getClassLoader().getResourceAsStream("com.isuwang.soa.time.service.TimeTaskService.xml"));
                  BufferedReader in = new BufferedReader(isr)) {
                 int len = 0;
                 StringBuilder str = new StringBuilder("");
@@ -811,17 +757,17 @@ public class CustomerServiceCodec {
     }
 
     @SuppressWarnings("unchecked")
-    public static class Processor<I extends com.isuwang.soa.message.service.CustomerService> extends SoaBaseProcessor {
+    public static class Processor<I extends com.isuwang.soa.time.service.TimeTaskService> extends SoaBaseProcessor {
         public Processor(I iface) {
             super(iface, getProcessMap(new java.util.HashMap<>()));
         }
 
         @SuppressWarnings("unchecked")
-        private static <I extends com.isuwang.soa.message.service.CustomerService> java.util.Map<String, SoaProcessFunction<I, ?, ?, ? extends TBeanSerializer<?>, ? extends TBeanSerializer<?>>> getProcessMap(java.util.Map<String, SoaProcessFunction<I, ?, ?, ? extends TBeanSerializer<?>, ? extends TBeanSerializer<?>>> processMap) {
+        private static <I extends com.isuwang.soa.time.service.TimeTaskService> java.util.Map<String, SoaProcessFunction<I, ?, ?, ? extends TBeanSerializer<?>, ? extends TBeanSerializer<?>>> getProcessMap(java.util.Map<String, SoaProcessFunction<I, ?, ?, ? extends TBeanSerializer<?>, ? extends TBeanSerializer<?>>> processMap) {
 
-            processMap.put("onCustomerUpdated", new onCustomerUpdated());
+            processMap.put("timerTask1", new timerTask1());
 
-            processMap.put("coCustomerUpdated2", new coCustomerUpdated2());
+            processMap.put("timerTask2", new timerTask2());
 
             processMap.put("getServiceMetadata", new getServiceMetadata());
 
