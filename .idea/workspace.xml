@@ -2,27 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2f118ba2-60a6-431f-84b2-fd3b04f61421" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_wangzaixiang_spray_json_2_11_1_3_4.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_scala_lang_scala_library_2_11_7.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/message-service/src/main/scala/com/isuwang/soa/message/binlog/BinlogEvent.scala" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/message-service/src/main/scala/com/isuwang/soa/message/binlog/BinlogUtils.scala" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/message-service/src/main/scala/com/isuwang/soa/message/binlog/demo/BinlogDemoAction.scala" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_isuwang_dapeng_core_1_1_SNAPSHOT.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_isuwang_dapeng_registry_api_1_1_SNAPSHOT.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_isuwang_dapeng_remoting_api_1_1_SNAPSHOT.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_isuwang_dapeng_route_api_1_1_SNAPSHOT.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_isuwang_dapeng_route_impl_1_1_SNAPSHOT.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_isuwang_dapeng_spring_1_1_SNAPSHOT.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_isuwang_dapeng_transaction_api_1_1_SNAPSHOT.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/message-service/src/main/scala/com/isuwang/soa/message/binlog/demo/CustomerScalaServiceImpl.scala" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/message-service/src/main/scala/com/isuwang/soa/message/binlog/BinlogUtils.scala" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/message-api/message-api.iml" afterPath="$PROJECT_DIR$/message-api/message-api.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/message-service/message-service.iml" afterPath="$PROJECT_DIR$/message-service/message-service.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/message-service/pom.xml" afterPath="$PROJECT_DIR$/message-service/pom.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/message-service/src/main/java/com/isuwang/soa/message/service/CustomerServiceImpl.java" afterPath="$PROJECT_DIR$/message-service/src/main/java/com/isuwang/soa/message/service/CustomerServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/message.subscribe.iml" afterPath="$PROJECT_DIR$/message.subscribe.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/message-service/src/main/scala/com/isuwang/soa/message/binlog/BinlogEvent.scala" afterPath="$PROJECT_DIR$/message-service/src/main/scala/com/isuwang/soa/message/binlog/BinlogEvent.scala" />
     </list>
     <ignored path="message.subscribe.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -47,13 +31,25 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="CustomerServiceImpl.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CustomerServiceImpl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/message-service/src/main/java/com/isuwang/soa/message/service/CustomerServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.032467533">
-              <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CustomerScalaServiceImpl.scala" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/message-service/src/main/scala/com/isuwang/soa/message/binlog/demo/CustomerScalaServiceImpl.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="1.1402439">
+              <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+              <folding>
+                <element signature="e#45#71#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -63,7 +59,7 @@
         <entry file="file://$PROJECT_DIR$/message-service/src/main/scala/com/isuwang/soa/message/binlog/demo/BinlogDemoAction.scala">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="10" column="14" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
+              <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="16" selection-end-column="1" />
               <folding>
                 <element signature="e#45#95#0" expanded="true" />
               </folding>
@@ -75,17 +71,7 @@
         <entry file="file://$PROJECT_DIR$/message-service/src/main/scala/com/isuwang/soa/message/binlog/BinlogEvent.scala">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="15" column="11" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BinlogUtils.scala" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/message-service/src/main/scala/com/isuwang/soa/message/binlog/BinlogUtils.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+              <caret line="23" column="20" selection-start-line="23" selection-start-column="20" selection-end-line="23" selection-end-column="20" />
               <folding>
                 <element signature="e#40#66#0" expanded="true" />
               </folding>
@@ -137,11 +123,12 @@
         <option value="$PROJECT_DIR$/message-service/src/main/scala/BinlogEvent.scala" />
         <option value="$PROJECT_DIR$/message-service/src/main/scala/BinlogDemoAction.scala" />
         <option value="$PROJECT_DIR$/message-service/src/main/java/com/isuwang/soa/message/binlog/BinlogEvent.scala" />
-        <option value="$PROJECT_DIR$/message-service/src/main/scala/com/isuwang/soa/message/binlog/BinlogEvent.scala" />
         <option value="$PROJECT_DIR$/message-service/src/main/scala/com/isuwang/soa/message/binlog/BinlogDemoAction.scala" />
-        <option value="$PROJECT_DIR$/message-service/src/main/scala/com/isuwang/soa/message/binlog/BinlogUtils.scala" />
         <option value="$PROJECT_DIR$/message-service/src/main/scala/com/isuwang/soa/message/binlog/demo/BinlogDemoAction.scala" />
+        <option value="$PROJECT_DIR$/message-service/src/main/scala/com/isuwang/soa/message/binlog/BinlogUtils.scala" />
+        <option value="$PROJECT_DIR$/message-service/src/main/scala/com/isuwang/soa/message/binlog/BinlogEvent.scala" />
         <option value="$PROJECT_DIR$/message-service/src/main/java/com/isuwang/soa/message/service/CustomerServiceImpl.java" />
+        <option value="$PROJECT_DIR$/message-service/src/main/scala/com/isuwang/soa/message/binlog/demo/CustomerScalaServiceImpl.scala" />
       </list>
     </option>
   </component>
@@ -192,6 +179,8 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -252,6 +241,10 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="binlog" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BinlogEvent.scala" />
+              <option name="myItemType" value="org.jetbrains.plugins.scala.components.ScalaDefsProjectViewProvider$ScalaFileTreeNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -339,6 +332,10 @@
               <option name="myItemId" value="soa" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="service" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -376,8 +373,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -903,26 +898,24 @@
       <updated>1473242163555</updated>
       <workItem from="1473242172778" duration="3504000" />
       <workItem from="1473315917977" duration="916000" />
-      <workItem from="1473589104756" duration="4784000" />
+      <workItem from="1473589104756" duration="5530000" />
+      <workItem from="1473644269497" duration="7122000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9204000" />
+    <option name="totallyTimeSpent" value="17072000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="JRebel Executor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.51232874" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JRebel remote servers log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24959612" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -932,12 +925,15 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="JRebel Executor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -961,6 +957,46 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/message-service/src/main/java/com/isuwang/soa/message/service/CustomerServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/message-service/src/main/scala/com/isuwang/soa/message/binlog/demo/BinlogDemoAction.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="16" selection-end-column="1" />
+          <folding>
+            <element signature="e#45#95#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/message-service/src/main/scala/com/isuwang/soa/message/binlog/BinlogEvent.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="16" column="83" selection-start-line="5" selection-start-column="0" selection-end-line="16" selection-end-column="83" />
+          <folding>
+            <element signature="e#40#66#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/message-service/src/main/scala/com/isuwang/soa/message/binlog/demo/BinlogDemoAction.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="16" selection-end-column="1" />
+          <folding>
+            <element signature="e#45#95#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/message-service/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -977,40 +1013,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/message-service/src/main/scala/com/isuwang/soa/message/binlog/BinlogUtils.scala">
+    <entry file="file://$PROJECT_DIR$/message-service/src/main/scala/com/isuwang/soa/message/binlog/BinlogEvent.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <caret line="23" column="20" selection-start-line="23" selection-start-column="20" selection-end-line="23" selection-end-column="20" />
           <folding>
             <element signature="e#40#66#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/message-service/src/main/scala/com/isuwang/soa/message/binlog/demo/BinlogDemoAction.scala">
+    <entry file="file://$PROJECT_DIR$/message-service/src/main/java/com/isuwang/soa/message/service/CustomerServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="10" column="14" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
           <folding>
-            <element signature="e#45#95#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/message-service/src/main/scala/com/isuwang/soa/message/binlog/BinlogEvent.scala">
+    <entry file="file://$PROJECT_DIR$/message-service/src/main/scala/com/isuwang/soa/message/binlog/demo/CustomerScalaServiceImpl.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="15" column="11" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/message-service/src/main/java/com/isuwang/soa/message/service/CustomerServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.032467533">
-          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+        <state vertical-scroll-proportion="1.1402439">
+          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#45#71#0" expanded="true" />
           </folding>
         </state>
       </provider>
