@@ -3,12 +3,14 @@ package com.isuwang.soa.message.service;
 import com.isuwang.dapeng.core.SoaException;
 import com.isuwang.dapeng.core.message.MessageConsumer;
 import com.isuwang.dapeng.core.message.MessageConsumerAction;
+import com.isuwang.soa.message.binlog.BinlogEvent;
 import com.isuwang.soa.message.binlog.BinlogUtils;
 import com.isuwang.soa.message.binlog.demo.BinlogDemoAction;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.nio.ByteBuffer;
+import java.util.List;
 
 /**
  * Created by tangliu on 2016/8/3.
@@ -22,7 +24,8 @@ public class CustomerServiceImpl implements CustomerService {
     @Override
     public void onCustomerUpdated(ByteBuffer message) throws SoaException {
         logger.info("onCustomerUpdated been called ...");
-        BinlogUtils.parseBinlogEvent(message).forEach(binlogEvent -> new BinlogDemoAction(binlogEvent).action());
+        List<BinlogEvent> events = BinlogEvent.apply(message);
+        events.forEach(binlogEvent -> new BinlogDemoAction(binlogEvent).action());
     }
 
     @Override
