@@ -7,6 +7,8 @@ import com.alibaba.otter.canal.protocol.CanalEntry.{RowData, EventType}
 import spray.json._
 import scala.collection.JavaConversions._
 
+import scala.collection.{immutable, mutable}
+
 /**
   * binlog事件模型
   *
@@ -21,7 +23,7 @@ case class BinlogEvent(schema: String, tblName: String, eventType: EventType,
                        timestamp: Long, before: JsValue, after: JsValue)
 
 
-object BinlogEvent {
+object BinlogEvent extends DefaultJsonProtocol {
 
   def apply(message: ByteBuffer): java.util.List[BinlogEvent] = {
     message
