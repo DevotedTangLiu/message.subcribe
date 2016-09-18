@@ -7,8 +7,8 @@
         http://soa-springtag.isuwang.com/schema/service
         http://soa-springtag.isuwang.com/schema/service/service.xsd">
 
-    <bean id="accountService" class="com.isuwang.soa.message.service.CustomerServiceImpl"/>
-    <soa:service ref="accountService"/>
+    <bean id="customerService" class="com.isuwang.soa.message.service.CustomerServiceImpl"/>
+    <soa:service ref="customerService"/>
 
     <bean id="timerService" class="com.isuwang.soa.time.service.TimerTaskServiceImpl"/>
     <soa:service ref="timerService"/>

@@ -1,8 +1,9 @@
 package com.isuwang.soa.message.service;
 
 import com.isuwang.dapeng.core.SoaException;
-import com.isuwang.dapeng.core.message.MessageConsumer;
-import com.isuwang.dapeng.core.message.MessageConsumerAction;
+
+import com.isuwang.dapeng.message.consumer.api.annotation.MessageConsumer;
+import com.isuwang.dapeng.message.consumer.api.annotation.MessageConsumerAction;
 import com.isuwang.soa.message.binlog.BinlogEvent;
 import com.isuwang.soa.message.binlog.demo.BinlogDemoAction;
 import org.slf4j.Logger;
